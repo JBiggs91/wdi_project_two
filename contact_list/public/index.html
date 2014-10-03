@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script src='./javascripts/jquery.js'></script>
+	<script src='./javascripts/underscore.js'></script>
+	<script src='./javascripts/backbone.js'></script>
+	<script src="./javascripts/bootstrap.js"></script>
+
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+	<script src="./javascripts/scripts.js"></script>
+
+	<script id='template1' type='text/template'>
+		<a data-toggle="modal" data-target="#info" class="name"><%= contact.name %></a>
+	</script>
+
+	<script id="modal-template" type="text/template">
+		<div class="modal-header">
+
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+			<h4 class="modal-title" id="myModalLabel"><%= contact.name Info</h4>
+
+			 <div class="modal-body">
+			 	<ul>
+					<li class="age"><%= contact.age %></li>
+					<li class="address"><%= contact.address %></span>
+					<li class="number"><%= contact.number %></li>
+				</ul>
+			</div>
+		</div>
+	</script>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="row header">
+			<header>
+				<h1>Contact List</h1>
+			</header>
+			<div class="form col-md-12">
+				<input type="text" name="contact-name" placeholder="Name">
+				<input type="text" name="contact-age" placeholder="Age">
+				<input type="text" name="contact-address" placeholder="Address">
+				<input type="text" name="contact-number" placeholder="Phone Number">
+				<select name="contact-category">
+  					<option value="friends">Friends</option>
+  					<option value="frenemies">Frenemies</option>
+  					<option value="other">Other</option>
+				</select>
+				<i class="fa fa-plus-square fa-2x" id="add-contact" value="button"></i>
+			</div>
+		</div>
+		
+		<div class="row">
+			<section class="col-md-4 list">
+				<h2>Friends</h2>
+				<ul id="friends"></ul>
+			</section>
+			
+			<section class="col-md-4 list">
+				<h2>Frenemies</h2>
+				<ul id="frenemies"></ul>
+			</section>
+
+			<section class="col-md-4 list">
+				<h2>Other</h2>
+				<ul id="others"></ul>
+			</section>		
+		</div>
+	</div>
+
+	<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+
+
+
+		</div>
+	</div>
+
+</body>
+	<style>
+		.header {
+			text-align: center;
+		}
+
+	</style>
+</html>
