@@ -335,18 +335,19 @@ $(function(){
 				
 			})
 			setTimeout(function() {
+				google.maps.event.trigger(map, "resize");
 				map.fitBounds(bounds);
 			}, 300);
 
 		})
 	}
-	initializeMap();
+	// initializeMap();
 	
 	$(".map-button").click(function() {
 
-	  // $("#map-toggle").toggle("pulsate");
-	  // $(".row").toggle();
-	  // $(".header").toggle();
+	  $("#map-toggle").toggle("pulsate");
+	  $(".article-lists").toggle("pulsate");
+	  initializeMap();
 	});
 })
 

@@ -48,11 +48,11 @@ li {
 	margin: 0 auto;
 	padding: 0px;
 	margin-top: 100px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 #map-toggle {
-/*	display: none;*/
+	display: none;
 }
 
 .friends {
@@ -109,4 +109,8 @@ i {
 
 .name {
 	font-size: 20px;
+}
+
+i:hover {
+	color: #0079AF;
 }
