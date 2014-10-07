@@ -324,7 +324,15 @@ $(function(){
 				      		title: model.attributes.name
 				  		});
 					}
+
+					google.maps.event.addListener(marker, 'click', function() {
+						new ModalView({model: model})
+						$('#info').modal('show')
+					});
+					
 				});
+
+				
 			})
 			setTimeout(function() {
 				map.fitBounds(bounds);
@@ -332,11 +340,14 @@ $(function(){
 
 		})
 	}
-	
-	// $(".map-button").click(function() {
-	//   $("#map-toggle").toggle("pulsate");
-	// });
 	initializeMap();
+	
+	$(".map-button").click(function() {
+
+	  // $("#map-toggle").toggle("pulsate");
+	  // $(".row").toggle();
+	  // $(".header").toggle();
+	});
 })
 
 
