@@ -3,6 +3,8 @@ require_relative './db/connection'
 require_relative './lib/category'
 require_relative './lib/contact'
 require 'active_support'
+require 'httparty'
+require 'hipchat'
 
 after do
   ActiveRecord::Base.connection.close
