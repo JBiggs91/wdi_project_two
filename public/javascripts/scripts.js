@@ -76,9 +76,9 @@ $(function(){
 
 	
 
-	var friendList = new ContactListView({ collection: contacts, el: $('.friends'), filter: 6})
-	var frenemyList = new ContactListView({ collection: contacts, el: $('.frenemies'), filter: 7})
-	var otherList = new ContactListView({ collection: contacts, el: $('.other'), filter: 8})
+	var friendList = new ContactListView({ collection: contacts, el: $('.friends'), filter: 1})
+	var frenemyList = new ContactListView({ collection: contacts, el: $('.frenemies'), filter: 2})
+	var otherList = new ContactListView({ collection: contacts, el: $('.other'), filter: 3})
 
 	var FormView = Backbone.View.extend({
 		events: {
