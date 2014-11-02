@@ -1,8 +1,12 @@
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require(:default)
 require 'sinatra'
 require_relative './db/connection'
 require_relative './lib/category'
 require_relative './lib/contact'
 require 'active_support'
+
 
 after do
   ActiveRecord::Base.connection.close
@@ -10,6 +14,11 @@ end
 
 before do
   content_type :json
+end
+
+get("/") do 
+  content_type :html
+  File.open("./public/index.html")
 end
 
 get("/categories") do
@@ -45,7 +54,7 @@ get("/contacts") do
 end
 
 get("/contacts/:id") do
-  Contact.find_by(params[:id]).to_json
+  Contact.find_by(id: params[:id]).to_json
 end
 
 post("/contacts") do
