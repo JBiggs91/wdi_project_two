@@ -1,6 +1,6 @@
 # Contact List
 
-<span style="color:gray">This is an application that allows users to store and organize their contacts.</span>
+<span style="color:gray">This is an application that allows a user to store and organize their contacts.</span>
 
 ---
 
