@@ -12,6 +12,11 @@ before do
   content_type :json
 end
 
+get("/") do 
+  content_type :html
+  File.open("./public/index.html")
+end
+
 get("/categories") do
   Category.all.to_json
 end
