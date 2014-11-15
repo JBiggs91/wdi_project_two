@@ -13,6 +13,7 @@ $(function(){
 // 
 //	Collections
 // 
+//
 	
 	var ContactCollection = Backbone.Collection.extend({
 		url: '/contacts',
